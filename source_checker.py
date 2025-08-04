@@ -143,34 +143,3 @@ print("\n" + "-"*50 + "\n")
 
 print("Items in AST map not in ParcaMap:")
 pprint(set(iodict.keys()).difference(ourset))
-
-# import json
-# import sys
-# import os
-# from pprint import pprint
-# import _pickle as pickle
-# sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-
-# with open("reconstruction/ecoli/simulation_data.py", "r") as file:
-#     contents = file.read().split('def calculate_ppgpp_expression')[0]
-
-# with open("reconstruction/sim_data/kb/simData.cPickle", "rb") as file:
-#     unpick = pickle.Unpickler(file)
-#     data = unpick.load()
-
-# attrs = contents.split('self.')
-# attrs.pop(0)
-# attr_set = set()
-
-# for portion in attrs:
-#     attr = portion.split(' ')[0]
-#     if not "(" in attr:
-#         attr_set.add(attr.strip().split('[')[0].strip(']').strip(')').strip(':'))
-
-# simkeys = set()
-# for key in dir(data):
-#     if not key.startswith("__"):
-#         simkeys.add(key)
-
-
-# pprint(simkeys.difference(attr_set))
